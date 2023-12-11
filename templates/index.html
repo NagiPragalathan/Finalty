@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>CaterServ - Catering Services Website Template</title>
+        <title>Finalty - Home</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -12,7 +12,7 @@
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng:wght@400;600&family=Playball&display=swap" rel="stylesheet">
 
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -22,13 +22,26 @@
         <link href=" {% static 'lib/animate/animate.min.css' %} " rel="stylesheet">
         <link href=" {% static 'lib/lightbox/css/lightbox.min.css' %} " rel="stylesheet">
         <link href=" {% static 'lib/owlcarousel/owl.carousel.min.css' %} " rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Customized Bootstrap Stylesheet -->
         <link href=" {% static 'css/bootstrap.min.css' %} " rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href=" {% static 'css/style.css' %} " rel="stylesheet">
     </head>
+
+    <style>
+        @media (max-width: 770px) {
+            #hero{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: calc(var(--bs-gutter-y)*-1);
+                margin-right: calc(var(--bs-gutter-x)/-2);
+                margin-left: calc(var(--bs-gutter-x)/-2);
+                flex-direction: column-reverse;            
+            }
+        }
+    </style>
 
     <body>
 
@@ -43,33 +56,20 @@
         <div class="container-fluid nav-bar">
             <div class="container">
                 <nav class="navbar navbar-light navbar-expand-lg py-4">
-                    <a href=" {% static 'index.html' %} " class="navbar-brand">
-                        <h1 class="text-primary fw-bold mb-0">Cater<span class="text-dark">Serv</span> </h1>
+                    <a href="/" class="navbar-brand">
+                        <h1 class="text-primary fw-bold mb-0">Fin<span class="text-dark">alty</span> </h1>
                     </a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href=" {% static 'index.html' %} " class="nav-item nav-link active">Home</a>
-                            <a href=" {% static 'about.html' %} " class="nav-item nav-link">About</a>
-                            <a href=" {% static 'service.html' %} " class="nav-item nav-link">Services</a>
-                            <a href=" {% static 'event.html' %} " class="nav-item nav-link">Events</a>
-                            <a href=" {% static 'menu.html' %} " class="nav-item nav-link">Menu</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu bg-light">
-                                    <a href=" {% static 'book.html' %} " class="dropdown-item">Booking</a>
-                                    <a href=" {% static 'blog.html' %} " class="dropdown-item">Our Blog</a>
-                                    <a href=" {% static 'team.html' %} " class="dropdown-item">Our Team</a>
-                                    <a href=" {% static 'testimonial.html' %} " class="dropdown-item">Testimonial</a>
-                                    <a href=" {% static '404.html' %} " class="dropdown-item">404 Page</a>
-                                </div>
-                            </div>
-                            <a href=" {% static 'contact.html' %} " class="nav-item nav-link">Contact</a>
+                            <a href="" class="nav-item nav-link active">Home</a>
+                            <a href="#about" class="nav-item nav-link">About</a>
+                            <a href="#contact" class="nav-item nav-link">Contact</a>
                         </div>
-                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                        <a href=" {% static '' %} " class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><img style="width:41px" src="https://cdn-icons-png.flaticon.com/512/6569/6569264.png"></img></button>
+                        <a href="#contact" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
                     </div>
                 </nav>
             </div>
@@ -82,7 +82,7 @@
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content rounded-0">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Ask Anything :</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex align-items-center">
@@ -98,118 +98,982 @@
 
 
         <!-- Hero Start -->
-        <div class="container-fluid bg-light py-6 my-6 mt-0">
+        <div class="container-fluid bg-light py-6 mt-0">
             <div class="container">
-                <div class="row g-5 align-items-center">
+                <div class="row g-5 align-items-center flex-sm-column-reverse flex-md-column-reverse flex-lg-row flex-sm-row-reverse" id="hero">
                     <div class="col-lg-7 col-md-12">
-                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-4 animated bounceInDown">Welcome to CaterServ</small>
-                        <h1 class="display-1 mb-4 animated bounceInDown">Book <span class="text-primary">Cater</span>Serv For Your Dream Event</h1>
-                        <a href=" {% static '' %} " class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Book Now</a>
-                        <a href=" {% static '' %} " class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 animated bounceInLeft">Know More</a>
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-4 animated bounceInDown">Welcome to Finalty</small>
+                        <p class="display-5 mb-4 animated bounceInDown" style="color:black">Welcome to <span class="text-primary">Finalty</span> - A Comprehensive Guide to Smart Tenant-Landlord Solutions</p>
+                        <p class="lead">Experience the epitome of event excellence. Elevate your occasions with Finalty, providing unmatched catering solutions for unforgettable memories.</p>
+                        <a data-bs-toggle="modal" data-bs-target="#searchModal" class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Use Bot</a>
+                        <a href="#about" class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 animated bounceInLeft">Know More</a>
                     </div>
                     <div class="col-lg-5 col-md-12">
-                        <img src=" {% static 'img/hero.png' %} " class="img-fluid rounded animated zoomIn" alt="">
+                        <img style="width:100%" src=" {% static 'img/home/img1.png' %} " class="img-fluid rounded animated zoomIn" alt="">
                     </div>
                 </div>
             </div>
         </div>
         <!-- Hero End -->
 
+        <hr>
 
+        <div class="text-center wow bounceInUp" id="about" data-wow-delay="0.1s">
+            <h1 class="display-5 mb-5 pt-4">About</h1>
+        </div>
         <!-- About Satrt -->
-        <div class="container-fluid py-6">
+        <div class="container-fluid py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
-                        <img src=" {% static 'img/about.jpg' %} " class="img-fluid rounded" alt="">
+                        <img src="https://media.licdn.com/dms/image/D4E12AQEOr0LTZEAH9w/article-cover_image-shrink_720_1280/0/1684331292817?e=2147483647&v=beta&t=_ALqnvf-b19VMrFBx8OtsAI06Be8B4Ps59IjdtH1bkE" class="img-fluid rounded" alt="">
                     </div>
                     <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
-                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">About Us</small>
-                        <h1 class="display-5 mb-4">Trusted By 200 + satisfied clients</h1>
-                        <p class="mb-4">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eit esdioilore magna aliqua. Ut enim ad minim veniam, 
-                            quis nostrud exercitation ullaemco laboeeiris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                            dolor iesdein reprehendeerit in voluptate velit esse cillum dolore.</p>
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3"> Seamless Communication</small>
+                        <h1 class="display-5 mb-4">Direct Interaction Between Tenants and Landlords</h1>
+                        <p class="mb-4">Discovered a feature of our app that allows tenants and landlords to connect
+                            directly and to have clear transactions between the Landlord and The tenants. If
+                            a tenant likes a landlord's profile, or vice versa, they can initiate direct
+                            communication, making the process of finding the perfect match smoother and
+                            more efficient.</p>
                         <div class="row g-4 text-dark mb-5">
                             <div class="col-sm-6">
-                                <i class="fas fa-share text-primary me-2"></i>Fresh and Fast food Delivery
+                                <i class="fas fa-share text-primary me-2"></i>Seamless Connection
                             </div>
                             <div class="col-sm-6">
-                                <i class="fas fa-share text-primary me-2"></i>24/7 Customer Support
+                                <i class="fas fa-share text-primary me-2"></i>Clear Transactions
                             </div>
                             <div class="col-sm-6">
-                                <i class="fas fa-share text-primary me-2"></i>Easy Customization Options
+                                <i class="fas fa-share text-primary me-2"></i>Initiate Communication
                             </div>
                             <div class="col-sm-6">
-                                <i class="fas fa-share text-primary me-2"></i>Delicious Deals for Delicious Meals
+                                <i class="fas fa-share text-primary me-2"></i>Efficient Matchmaking
                             </div>
                         </div>
-                        <a href=" {% static '' %} " class="btn btn-primary py-3 px-5 rounded-pill">About Us<i class="fas fa-arrow-right ps-2"></i></a>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal1">More <i class="fas fa-arrow-right ps-2"></i></button>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Seamless Communication</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Seamless Connection:</h4>
+                            <p class="mb-4">Facilitate direct interaction, enhancing communication between tenants and landlords.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Clear Transactions:</h4>
+                            <p class="mb-4">Ensure transparency in financial dealings for both landlords and tenants.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Initiate Communication:</h4>
+                            <p class="mb-4">Empower users to start direct conversations based on profile preferences.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Efficient Matchmaking:</h4>
+                            <p class="mb-4">Streamline the process, making tenant-landlord connections smoother and more effective.</p>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
         <!-- About End -->
-
-
-        <!-- Fact Start-->
-        <div class="container-fluid faqt py-6">
+        <!-- 2. About Satrt -->
+        <div class="container-fluid py-5">
             <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-7">
-                       <div class="row g-4">
-                            <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.3s">
-                                <div class="faqt-item bg-primary rounded p-4 text-center">
-                                    <i class="fas fa-users fa-4x mb-4 text-white"></i>
-                                    <h1 class="display-4 fw-bold" data-toggle="counter-up">689</h1>
-                                    <p class="text-dark text-uppercase fw-bold mb-0">Happy Customers</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.5s">
-                                <div class="faqt-item bg-primary rounded p-4 text-center">
-                                    <i class="fas fa-users-cog fa-4x mb-4 text-white"></i>
-                                    <h1 class="display-4 fw-bold" data-toggle="counter-up">107</h1>
-                                    <p class="text-dark text-uppercase fw-bold mb-0">Expert Chefs</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.7s">
-                                <div class="faqt-item bg-primary rounded p-4 text-center">
-                                    <i class="fas fa-check fa-4x mb-4 text-white"></i>
-                                    <h1 class="display-4 fw-bold" data-toggle="counter-up">253</h1>
-                                    <p class="text-dark text-uppercase fw-bold mb-0">Events Complete</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row g-5 align-items-center flex-row-reverse">
                     <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
-                        <div class="video">
-                            <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                                <span></span>
-                            </button>
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/payment-processing-9773386-7973909.png?f=webp" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Hassle-Free Payment Process</small>
+                        <h1 class="display-5 mb-4">Automatic Rent Payments</h1>
+                        <p class="mb-4"> Bid farewell to the hassle of remembering rent deadlines. Our app
+                            ensures a seamless payment process by automatically transferring the respective
+                            rent amount to the landlord each month. Receive timely notifications to remind
+                            you about the upcoming rent payment, making the entire process stress-free.</p>
+                        <h1 class="display-5 mb-4">Payment Reminders with a Personal Touch</h1>
+                        <p class="mb-4"> Our app doesn't just remind you to pay rent; it delivers a personalized
+                            message on end of the month, gently reminding you to keep the necessary funds
+                            in your account. "You have to pay the rent, so keep the respective rent amount
+                            in your account balance" - ensuring a stress-free payment experience.</p>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Automatic Rent Payments
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Personalized Payment Reminders
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Seamless Process Assurance
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Financial Responsibility Encouragement
+                            </div>
                         </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal2">More <i class="fas fa-arrow-right ps-2"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Modal Video -->
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="modal fade" id="searchModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
                 <div class="modal-content rounded-0">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Hassle-Free Payment Process</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <!-- 16:9 aspect ratio -->
-                        <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src=" {% static '' %} " id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Automatic Rent Payments:</h4>
+                            <ul>
+                              <li>Say goodbye to rent payment stress as our app seamlessly transfers the respective rent amount to the landlord each month, eliminating the need to remember deadlines.</li>
+                              <li>Receive timely notifications to remind you about upcoming rent payments, ensuring a hassle-free and on-time transaction process.</li>
+                            </ul>
+                          </div>
                         </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Personalized Payment Reminders:</h4>
+                            <ul>
+                              <li>Experience a personal touch in payment reminders – our app goes beyond generic alerts.</li>
+                              <li>Receive a customized end-of-month message gently reminding you to maintain the necessary funds for stress-free rent payments.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Seamless Process Assurance:</h4>
+                            <ul>
+                              <li>Our app guarantees a stress-free payment experience by automating the entire process, providing peace of mind to both tenants and landlords.</li>
+                              <li>Enjoy the convenience of effortless rent transactions, making financial interactions smoother and more efficient.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Financial Responsibility Encouragement:</h4>
+                            <ul>
+                              <li>Foster financial responsibility with personalized messages that emphasize the importance of keeping the respective rent amount in your account balance.</li>
+                              <li>Promote a proactive approach to rent payment, creating a positive and accountable financial experience for users.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!--3. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/judicial-penalty-9522747-7740759.png?f=webp" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Intervention and Penalties</small>
+                        <h1 class="display-5 mb-4">Prompt Response to Missed Payments</h1>
+                        <p class="mb-4">t, our company steps in to
+                            cover the rent on behalf of the tenant, ensuring a safety net for our users. As part
+                            of maintaining financial responsibility, a nominal fee is associated with delayed
+                            payments, fostering accountability within our community.</p>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Prompt Response to Missed Payments
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Financial Safety Net
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Nominal Fee for Accountability
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Community Financial Health
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal3">More <i class="fas fa-arrow-right ps-2"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Fact End -->
-
+        <div class="modal fade" id="searchModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Intervention and Penalties</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Prompt Response to Missed Payments:</h4>
+                            <ul>
+                              <li>In the unfortunate event of a missed payment, our company ensures a swift response by stepping in to cover the rent on behalf of the tenant.</li>
+                              <li>This proactive measure serves as a safety net for our users, preventing potential disruptions in housing.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Financial Safety Net:</h4>
+                            <ul>
+                              <li>Our intervention acts as a financial safety net, providing tenants with reassurance during challenging times.</li>
+                              <li>By covering missed payments promptly, we prioritize the stability and well-being of our community members.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Nominal Fee for Accountability:</h4>
+                            <ul>
+                              <li>To encourage financial responsibility, a nominal fee is associated with delayed payments.</li>
+                              <li>This fee fosters accountability within our community, promoting timely and responsible payment practices.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Community Financial Health:</h4>
+                            <ul>
+                              <li>The associated fee contributes to maintaining the overall financial health of our community.</li>
+                              <li>This approach ensures a fair balance between supporting tenants in need and upholding financial responsibility standards for the benefit of all community members.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>                      
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- 4. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center flex-row-reverse">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/protection-of-property-interests-7718371-6253674.png?f=webp" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Damage Reporting and Legal Action</small>
+                        <h1 class="display-5 mb-4">Protecting Property Interests</h1>
+                        <p class="mb-4"> In case of tenant-caused damage, landlords can request our company's
+                            intervention. Our team will take legal action and, if needed, initiate a formal
+                            complaint process with local law enforcement. This process is initiated at the
+                            landlord's discretion. Our commitment is to address issues efficiently and uphold
+                            the rights of both landlords and tenants.</p>
+                       <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Property Damage Reporting
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Legal Action Assurance
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Formal Complaint Process
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Efficient Issue Resolution
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal4">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Damage Reporting and Legal Action</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Property Damage Reporting:</h4>
+                            <ul>
+                              <li>Landlords can request our company's intervention in the case of tenant-caused damage.</li>
+                              <li>A streamlined process is in place to efficiently report and address property damage issues.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Legal Action Assurance:</h4>
+                            <ul>
+                              <li>Our commitment includes taking legal action when necessary, initiated at the landlord's discretion.</li>
+                              <li>This ensures the protection of property interests and upholds the rights of both landlords and tenants.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Formal Complaint Process:</h4>
+                            <ul>
+                              <li>If required, our team initiates a formal complaint process with local law enforcement to address serious property damage cases.</li>
+                              <li>This step is part of our comprehensive approach to resolving issues promptly and maintaining a secure housing environment.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Efficient Issue Resolution:</h4>
+                            <ul>
+                              <li>Our priority is to address property damage issues efficiently, providing landlords with a reliable mechanism to protect their property interests.</li>
+                              <li>By upholding the rights of both parties, we contribute to a fair and responsible housing community.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!--5. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/019/522/844/small_2x/benchmarking-concept-set-idea-of-business-development-and-improvement-compare-quality-with-competitor-companies-free-vector.jpg" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3"> Financial History Transparency</small>
+                        <h1 class="display-5 mb-4">Financial Accountability</h1>
+                        <p class="mb-4">Our app provides landlords with a transparent view of a tenant's
+                            financial history, including water tax, current bills, and payment records. This
+                            feature empowers landlords to make informed decisions, ensuring a trustworthy
+                            and responsible tenant.</p>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Transparent Financial Records
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Empowering Informed Decisions
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Comprehensive Payment Records
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Trustworthy and Responsible Tenant Selection
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal5">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Financial History Transparency</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Transparent Financial Records:</h4>
+                            <ul>
+                              <li>Our app grants landlords access to a clear and transparent view of a tenant's financial history.</li>
+                              <li>This includes details such as water tax, current bills, and payment records, providing comprehensive insights into a tenant's financial track record.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Empowering Informed Decisions:</h4>
+                            <ul>
+                              <li>The financial history transparency feature empowers landlords to make well-informed decisions.</li>
+                              <li>By having access to detailed financial information, landlords can assess the financial responsibility of potential tenants, ensuring a trustworthy leasing relationship.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Comprehensive Payment Records:</h4>
+                            <ul>
+                              <li>Landlords benefit from a comprehensive overview that encompasses not only rent payments but also other financial aspects like water tax and current bills.</li>
+                              <li>This thorough financial snapshot aids landlords in understanding the tenant's financial habits and making decisions that align with their property management goals.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Trustworthy and Responsible Tenant Selection:</h4>
+                            <ul>
+                              <li>The transparency in financial history facilitates the selection of trustworthy and responsible tenants.</li>
+                              <li>Landlords can confidently choose tenants who have a proven track record of timely payments and financial accountability, creating a positive and reliable renting experience.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>                      
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- 6. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center flex-row-reverse">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img style="height: 256px;" src="data:image/png;base64,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" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Tenant Behaviour Profile</small>
+                        <h1 class="display-5 mb-4">Informed Decision-Making</h1>
+                        <p class="mb-4"> Tenant behaviour, rent payment history, and current bill payment
+                            records create a detailed profile within the app. Timely payments positively
+                            influence the profile, fostering accountability. In cases where tenants consistently
+                            miss payments or disregard check-out directives, the company may take legal
+                            action for resolution. Similarly, landlords' profiles note any issues or
+                            misbehaviour, prompting appropriate action from the company to maintain a
+                            responsible housing community.</p>
+                       <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Detailed Tenant Behavior Profile
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Positive Influence of Timely Payments
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Legal Action for Consistent Missed Payments
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Landlords' Profiles Recording Issues
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal6">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tenant Behaviour Profile</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Detailed Tenant Behavior Profile:</h4>
+                            <ul>
+                              <li>The app compiles a comprehensive profile for each tenant, encompassing behavior, rent payment history, and current bill payment records.</li>
+                              <li>This detailed profile provides landlords with valuable insights for a thorough understanding of a tenant's renting behavior.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Positive Influence of Timely Payments:</h4>
+                            <ul>
+                              <li>Timely payments positively influence a tenant's profile, fostering accountability within the community.</li>
+                              <li>Encouraging on-time payments contributes to the creation of a responsible and reliable tenant base.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Legal Action for Consistent Missed Payments:</h4>
+                            <ul>
+                              <li>In cases of consistent missed payments or disregard for check-out directives, the company may take legal action for resolution.</li>
+                              <li>This policy underscores the importance of financial responsibility and adherence to property guidelines for tenants within the community.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Landlords' Profiles Recording Issues:</h4>
+                            <ul>
+                              <li>Landlords' profiles within the app note any issues or misbehavior by tenants, creating a transparent record.</li>
+                              <li>This feature prompts appropriate action from the company to maintain a responsible housing community and address concerns promptly.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!--7. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img style="height:253px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARoAAACzCAMAAABhCSMaAAABv1BMVEX////s7Ozj4+MVJj1x2truUlJR5MvuT08Rcoju7u7s8PDucXFJqrTz8vLx7e3+8/MAFTKRl54AGTT/4oV9hI35+fnk2dkiMkiU399YaWvZ6emq4uLFyMlUqKui4eHp6Ojx6taGkJH06Mb94o3P6Oh529sAaoL5ubJ/kpegrbAAHjVQFQZ2u8PO1dZt1dYAACh50NCK286ZvbiKvsfItW7yhYW/1NYAPUlZd33L0tS83rJthIoAACGzvsCYqKtGAAAQDTGbzNHT8/O77OzRUlRGUGA9AAD4wLr75JwujZ2Hm5/I8PC+4ODp+fn2ra3ygoLCUlWev8hRj6AAttX/43x66dXj4JhZvcOn6NxjgIZ3U005ZGz84d6N7NsATFYTUmhU7dIyhYFL075ARUcADzgkoKuEwsn60NDwZGTcTU7tQUH0l5cEMUhkbHjYb3BZYnB8p7Olko68sK6maWDQkIj/33OLb2vAlI777cP55ajYyMfhu7eY2uldxt424sbc4J2j3cBQDgBXIxl+SUGchobdnpY+W2I5eH6ubmQxAACXf3swnpM6nZVDuqovfXozP1GvnmiNhF5va1VYV0zcxXmVwa9AAAAZBklEQVR4nO2di2PTRp7HJZEmljdyQoLA57gohdhOCCKwbZN4QQESipuHaW2SJuBg0kdgW9i7tMvSF/Vu6Pa6d722e7v7B988pRlpJI38Ssvxc4tlW7Y1n3x/j9HMyIry0l7aS3tpL+2lvbT/l7ZxHdrUUR/GL9HOD0Pbzx31cfwCDaMZfoAfmZ3b0Tanm0bQDF/PAZuaJ6a1ablsYf2oW9Q1o2iG94G52+2i2RgYKMBPLUy8AOpx0XAmaralTeViVTMwMDCxUp0YGMgedcM6NxbN9evhaKayBdDsODTZAWovgF+xaJQH4Whwozc8fQT2GMhuDHh21O3qgkE0+8MbChRNdT83dX5fjOY0anCWPtwYKGyIdnBt5agb1rkBNOenlCp0JfPB8PmcknsgRDOBW0wfQu/i4eAdCsumWUWUlpfXq0fduM4MoNlQrsPkdD0NBXReqe6L0BBnyU5MACAWkQjrVRbco4AT08oLEW+gQ20oyvXhfSCa4QdVZeq8UDVsHCmQaFsI6GqZfGoBvX76SFvWseEwfN3cf1AF97mNYWGssVgyrvHRJssEXyibwsSv36FwlWe6mZtFszFl0WYHjaeXJeUetHXw6q8cjIfmfFVU8k2hYDslBOOlK2i5CehEtAY+/SKk7+hqWKwWYqctRjM4upCUbQ68SKoRoslFkeFjDclZKCmZBW/7V2zn9wVk9mVEwwebqYl1RCe7vk6Lv4mjbltXzPIZaW+BJzExBfqYuQ3v2ayl0X0t8CksyZXCwAvQ+VYU1Z+sqU0wjXWjLpPJs9kCADUFnoQcqt7Ov/pAQ8wMIwOijSuRCdZ7fGrCoqFF8AtEJlw0TLiZsNhn+Qowi0WjQD9SqtXCi4MmQjSaRlrP9wlQfceGYyQapZpFNd/KQPZFQRMlGioP3xkIX1rPvRARN2iRoqFxOPACm7yy1lG3oUcWJRp69qFg+V9wc9dp0Mv69YlmRMpORtn1i8iygRfm8QsX0QO5Lwqz/oN5+PuhLtgrr7wC/g88/fHHQ+iF4Ct0hxvSX/H7h30ms/sJPPIe2dCNuA8fuhG7i7vrJw+TDZt2iuZRD8m88vHH8Q1OwObdx6fk7djxTtG8iQ5sKPBvV+yGTINvxPOje547Jm9zalfQDN26NUT//eTRrQ5gcCZDBopBkk0iNKMnOiWD0Aw9UpRbQ+TfNxWl0iXdyKGRZ3MDOdScFKDRzosohOZNiubR0NA7cLt9HGxLZHcceldut9+kVVXV7bck2Ix1LhriUG8+QoQQp3e6FZml0UiyAWh0aJoEmjmtS2h6EoblyQCTYYNVo6rGH8ZiRfOHzskQNL2wRGhk2LhoTsSi6YZolHfaq37jTb7MxfZu/C7SaLoiGuXRb3pk/979NzySRXOlG6IRWroLZid+hxr/FlUOTXdEIzS1Y9M1TU/+Hhu8R49/Xyya3ommG2jKycnohqYZumXpRsx749CM/UfPyHSOJqloDAPgsOdrB/XVVKp+YEW/OQ7NnP1LRpNENLpuHhzUU0ViqVQx5QOru+cZZND0UjQdo9FtTWo3wyAnVQANaMV6rVZDW7p/R2IyaHopms7RRItG95gQqyMeqXoNiKYGdVPjP4CS0SXQ9FQ0naLRbWkmxA6QaopQMcUDyKlucO+j+8k41Fz5F4xGDYgGMIk8H1nzo1k1hB+sxqM511PRxKLR0Y2541DoZWY7RCY+my96DoW221fNXL6XZDw0hsDA0/aStWQ7jr2kgbt8ecbmZGLBR5JMiOWIamokDBdrBvgAl7guH2vOvdVDLoqHxhC9aOiObei85T00umElP5WfhmiKuTpO3sAs/eSnn35mid0qCk2PRROjGl2zKAYd/2G9jNTuAAcEksbBGEKa182bV4H9VZjpItD0WjQxsUbPk4pMtxwHbeoz5Im2vxEUwQcHxeMpVPjVbUM17h7Ozs7e/FSkmwg0vRZNHBobo9G1adteQ4GFsGp/UOwAFcLHS/WD2rwGpWj88SpAczUpmp+7SEFoLgQVOw0xHxpjDTxnrIGD15fwE+JPm5yM/8YaqIPL2m5pxCDfs/sEoRH2psLRzDld5SAwegyKwQnBJGgcG6sGUsFoMKsQ0Uz+6e3J0K8yTZSJUD7S1RGFqmS3VHoeIpoINKe6ikFk7jHoTPeFpk43DCPVID4k1oT50/j4ZhAOYeJrtELY6Lul727efJowQ/VeNHGxhqjGmLmTz09DwZAMFYbm7DgLBzEJ+2yTatOqlJ58HlISh6LpeaThHIqPH6anGhBlHCOfR394UteEJagvx8cxnKBMAtjdLzn5qPQwnQxNH0TjojF11eCmZRieavQ7wJVIU3UnMkN9MY5t8+xkDBkSysH3gmBTeZhQNX0QjUzyNtbWvAOnydvHhoaTyc1xF86ZODbkI8wRuJEo1szN9BFNSBguAxI6m1ZJ8obvMF0m3ssZimZz/OyXscIxRUcig6b36Yk5IOD2ouSNqmE2augxJ3PPIjBvfxHvT+jTmK9MkLz7Ipq4kk+zfL1LYykazdsIjRwYHo4pj+ZYP8jExhqnnNccy9HyZRveOXbM+AFIUZtnvhyXRsN4lTSa0b6IJu5Ulq5amgpuFryABNqIyclnQJBR1fG320Aj3Yca7QuZ+BOgxMHoXdzuk5ubk/DfL+I/uF00ox1PapQy/nDA0VrwP8t/ZwXuQiFhwZz5U1y40W1/FSAKNiI0Y/2ZyW5xR6stWU657GgzGryz4J09A+/ytkPuQLTJw7sZO4QNqfViM3f6qwze8A5GDk2/RMMGVV0r+892hpthW4KWAIst9IidLJV2TVgSoQOpVqXR9Ek03Hh1RsvHhhKPYz5MNrL29dfMUgR0eQXBBwbR9E00FE0mJ28YDSOajMhi2WqO7v39V6TRnAs5i9Zl01w0vqWT0YZa5niqyRaCdjrIBgHLeWxgnU27UdJo+icagiYzEQ/EsylVZcYaQrB6DLCGclMbE3Axb5ZnpqdhlHmGlh8KsncQTd9E0z4aN9ZkwtFgJhsTp7PMCjtf46duf/Psm2eKJJouzLmXMb0jNG6PIQLNSrYgfoHxso3bt29/o8iimeufaLqNZnv4gkdAzGyK8yiI5pkii6afoumyQ10oFlMeGvGlOVb4YJNbdo8oHs2V9kcGk5gWjeZSNBrVjcLhaNLMe7ZTq2TLl7sYDxGcH+bR9FU0oWgubb4niBMeGi958w61yjiUynzCarE4jLd8KSq3QxfHr6/HoZnrzxJpLQ7N+PhfotC4ydtFc4HbCaDJMGj2i8VtvFXgG59rtQYHt4ANtlaCtRCHphureyRMl0Cz+Z7YqxCasl81264vuWjYaylsu+T4xqcBGWI7MWi6slAj3jQJNMB+F4omkKHg3DMfGnFw57N3elAWTQ/n3LOmSqIRCgc7lA/NMJzNOcyjIZefuLC66n87Yx6ae9Fo+iMa76IRMWgAnCAbUfK+gCcSbYNAvO1qg+hpuFhk2WzwBDw0W5Fo+i2aWDSb74lV40/e+2Sa1WqKhByIhhQ2kBlkcwGHm4n20PRbNLFoRFlKoJoLdAIaxLBP0aho9+0iZrNNkhSfvTNbHpsAGQZN30UTjWbzz8LaRpC8V1OMIQKoe4neTl5DsxqhbgqhaPgAzaO50ss5966xl6eJRPOXC/6nPTRc8t4upjijaLI+QWE2XOMz91wyLV+AZtH0ePo0NZ25ppwaimbzz0IuQjSrPBqYqRAaeK2b4aKfGtchYNAMBms+F01/RMNZGJrCe2G1sCh5Dxc5g9pAaOAF1lIBapw4MjtR2Zui6e1CjWRookwUhjkboA7F+xqlxmXvzIpXDgdTFEXT24UaXUSTgapxD1987iFHXkL+hGaWr+4P494Cl70zUx6aYBwmaMZ6PX26a2jg8CUzHWljImjkhBWqBVeHARMmovPRNofQbIm7CgTNUYiGQbMtjea3cDUH+4cPHWvJ+N6ZPT2xkUvz7c9gKFg2YjQ9n3Mfjebi49VX4+0idqjYlba02fSS59nTK1M5VThARdAgNi2/R2E0PZ9zH41mQFzDiCxYmYVaLjuxMZWLHLTDNd9OpiXyKIQGicaUHnNmh587R6Oqp7PSJjjjFG7x45i4sNkZuSdK3wgNEo3/MoBS1tHwONMEaUtARgbeDpYLCsf+9A3RYNG0Q6az86XdbWY7htC0VjLYsQRokGiiLjDZG9EcKRrSf1tvoe4Tqv1avlEFiObnoxGNwhwnfwu80H2zcWmEaj4Y2gU9TIAGzbk/AtFQNLqqsTcL3uAFzS0yu1HV6ITZuACkS1xfhHzlAp7Uj9CkcTxurftGqU6Mnjoi0RA0uqOxt7wNb+WyXUYb6Mky7k5mJgQzRoCR4l83QCZR5aoe4/JlJBsUfzPYs/wDLsaJK0clGorGji0RVNydzJwW1zp4TFL/7O7zw8PnT0/KsNGdBZ2iQZkpHSxsjBPHjko0GA2cIRXfkHg0+smbV68ezh4GlpiKrmhqqDr2KDgShYjAHBVAM3NUoiGqsTR98gxrk6rKPT5D14ixaC5hY9Boh4fffnt19upnPjSibzapR+WoH8E0fsmPBu56JKLxVHNm/CxjX6qTZzmja8QYNO9tYjvLOJRWKVWez978SirY6E4TxmyIBvU9QPpu/eibtAWHEdoSTecTcVzV6Nzad8H6nwCas3So6tVtd/5DulIqlf42K5nr9QX4obmtrR38OL2+XPatgTDbFE0XRmbI3yZvONOerRlr3gO65j2A5tLvsF264EPzhPMnQxRo8DI94FEmXlYF/wZow54x/Gj0eA69EA1VjQ3oeGabdj7vELO5lYWiMPzqAI+mkvY1Tmgm8qgl9B0zS8BmZpylmenFAJr+i8b00CDVLCKbtvH9oubOPCfiD4bhAXhO+OLFCwwa1arculWR8ib0vc3FO9AuE5uevrzAe5TZd9EYT+8+v+uigarBI7WWO1faHy3Eqnl1G9gFBk1691aptCvLxrgzbfJX+DCbDicbs9+iMUH5cXjzKxeNVnaX9aisVFg0ItWsfs+XfBBuqTISmJUnijdo3Z7T9P0NjDXeo8x+i+ZTeBWH2asnWdXEmFA1jWYADf4RBN/HCf88KvIo37oIvcx7VFuFcCeR5ilCc3jIqCYzyZmq+h7roo7C4l+zPBp32UEcaWLAo3wK030e1WfRKOiKMbOzNz/z0HzhrtBGS26ZFdtoLolQNQWQjhg0zHIM8SLToAk8is9RbZ337IAMRAPgHF596qHhV3nrwZJPpJrjpYq5vJJFaAzfong5NAKParIe1Q6ajmqau6CvM3v1+XeHJkVjlGcYM5htJ6Ku+f4/8WFUV5YD3xF1TTlGJIvT/kWOTadDNJ2QsQCZ0pMnpe++9cKwzdIwHXd7iaLRRGgaA+G/DcueKSQLOX0QEPGmjyHvUW2g6WRG+qc3D2/+rQQ7Oxot+cqGg+uuaQ3eg/8tv0PNhFXDgR8Mo489CHCxJlzRqTm2A5eOl8vwBBlK39qC36PyC8yK6TbQdEDmq6dPZ/8IyZRGmORt2cg0Hd8HsrlQNTQcr6O1k4pZXXn27JtvKBo33OiOYFGniuUIPMpX9RkNpxM0nS5jKJUegaJV8ToK3hHr4povXDVe8s48u337GybqUMfQNVHZRC7DNdNcbPDWZDwqOZoOySiV0q3PUUahBxBf8kWoxkWzscI7F3VG4UlE/CTwqDWHs/zMgpfQE6PpeO3LSOnJfz110UidAJVQTfDCaxxWn5EnjcU1v7sxOSoxmk7JAPvs5vOM0mXVcGhQAWgSrOGxBnqU78uN6TuuRyVF040FU+ah1/OWUs1SQjT4TA1+rw3z0xLOUiBDgRyVLzu0i28tlAM5yvWopGi6QAaUff/tolHRCJzgxpqMati/mY4ekcYKh2+oSBbX/KXNgtMmmu6ssrv7lYdGdzTbQjeV/A9vms18aV5qHIr5fAN1uHUJNDMNv0dddj0qIZqOiMzv7u5WQEHz8HPFQwPTN7o5Vh7cHLRdhjdc5JTtMmlKNBr27IPhXZZQR2Oi/pLPS+1Bj2rSqi8Zmo5+eK16AGs9c6RSqrBo3L+rypQ2or+xPBoTPcRX3nPoNV+Y7oLlVsEBj2JyVDI0HQ3LLZ+HaJRdXAsnn0QSg4Y9NvwQNVV42Xz3SZFHXTbaQJNUNCs8mtsIDaj5UDHcSzTwZOrICEIjvMSJiwZ4lO3rK7gelQhNQtFUW/e4hytwNESBsqn0Ho16q4TaLlSNx8to3Flacw2NftEclQRNUtHcG+TZQL1UFFc2XUbjFTbVLThYW6mEoykzOaoJB1qYMcK1ReJRSdAkFQ2elct0bR5iNEQ2ash1SdtEQ7P38r0WnmCFrnuq50XVsKcagUc5xKMSoEk6AWCdrADY2iEnDlxXArJ5mM5VKhm503FyaDLL6ys7O2jCIjPBikneKH3D5F1mz44Hc5RFTowmQJM0PXlLalot7FkjJDmNlCqpYrF+p16TnWKG2r4inkxMVqtktoTLtiNLPhXlKH9BfAd7lDyaxLNGmNVGwNBTAA36TWhzmvzozmqSX3iKnsvHLvwSLNsOM+hRvqqPDDXIo0lc09xjybSQSz1E2VuBP59Cf+Yh+U+mhYGLXPgVbkZjSexR0miSTzXaYtEM7lDZ7GI2B7VaHf1uSi/QCNYmh6MReBQaapBGk7wQHuQNPbdLPAqabtj4NzC6hIZZEzeYIPkJPSoJmjbmp/nQ4CRVIR6lwLrGgL+3U0+UpiLQrHtoRFcWCTWBR6GhBlk0yUVT9aHBHmVSj0IlnwEXYnfLo9jlgomCzZLYoyTRtCEaioaGnC389G7p64Ma2gJIjAOAJie5+CvOcgyaRB5liz2qZ6JRlsmRuo5Fnn9YShURG5OgSdXUSJ/SDTljrrky2NqRfBM0s7HkG4+CkyBl/Sk5GVoMb9GN1jp+fqR0vJjCm4ZCVhrX0qZ/sMw78PxxSeP8V/ZN0BabjUaTt2lZ0bQzAWDHBUJcinQ1d0uVOpYN/XU4+BuUtXBdjo3K2dwHDJm9H65Ivg3YseZb8ISi49DJluWlpiSZts577rhuVG25mwpSTYq4lEcmAo4zd0zOrrFoBveasT/H7VkTzrln5qdZ2kK+d6IhxfA9b7NFXtj9GqGoH6QombFj9+EzB2nR55ySbd+1HzmP+vGaPJqFRYWfCWstTsvFmnbIYB4tPAw9yGyD+Ft3r2iAegtFeHRhcKRF40ezJ8302OjxZpqfc2/NNHonGhJh8DZ2rh33tQPcgQLxt4akc5/CKQbg/CzdwGs/YCb/s4fRvD8q+85TSsPxzYS15TyqLTIYDaXBxmFoadCBKq7WIIdoOPKiOXaNMDmW1KPmHGVp0eDbLOdRbc5PY2sZnMC3QvZk4cAwdJDD+HLzudzP8sF09H2M5hq5/0D6nSDOLNh8o+U8qj0yO3ARrOdCWyyoGDjFYj2n4J+nLBbvy6P5iaC5RoLNgtz70OLTxpJPJHYz3qM6EA0jE1gbh6kG2jyGA0LnGIrMTKSWRTPWIGiIfPZ+kgs26Ld71hq+Gk/Go9ojgwIvc8YcdRsi3+HCSXHpKwGbJiLywTVa4fwgFWzQb/fo+aBHNePQdCAadqQFln2t0L0JHO66V8V6bf4+ekLWpx7vkeg79j2FJGFINJrWmPF7VGyOao8MFEmLnUFWZQsbGTjFA0XJz8GklUpJojm2h3oI12iJIxWHsWg0a63BXuIMmL64Fi2bNmeN7AQSEjzWlZC9WTg0yNQVXNNANo9xK8bmXBNGkTGE5ieY0xb2pOMwWUdYXqCDdHSFVKMRjaY9MjAh0Z42sXs+D4uBU5xHogHmBpuxxd96Jmrk6Aeo7wQ3r/0A2Ow14jP/KO09WY1FPHjpWbRHtTvVaCsQdNdjUhRjuTrAAQq/t86ho39Mm/Gh90N8b3wkaCaOvuSBbD1MF59a04sZ3qPUaI9qk4wikEhkYcMb6JEXc0Q0jH3oLXcJR0NiL6r74lMU+kUN3OXOL/jabi1FeVTb89MEMRfUgPFxGNt8EZ61IKLx7OfXXTsQ6QEFX4oDcorvKox6K5atZjBHlbsvGlOkEK6DGW0w2swEek8yaPa+J/EFFoCxDoVEQ3pPwKN8aKxGuEe1LRpTRAEkdMlgg85xoS7CY7amiUUD+5duVrr2fqMZl6Lm2GXuiTyqXTJAIS3BghzgUrLvd8/+sUXNh5uugVjz0UcfjY7xP5Dx/t4eU+Y9bjZi0LCiSeZR7U9qNC8OiJ5+cHFK8gPSXlXsJihfGH7jjb//7z/++SFERAE9fv+H7z1YC41mjGjQb/d4Igl4lBrqUW2TUeZff10AwQSeIDtqU74f7F16yRugOYWSOHjm7L/e+CficQqwaDKn9pqNx34WUaLRrHxT40mEelRy0cCJPcgO6uBWK7MGz9jXD4CR+cDRpr115fH9+8X79x+PnaM29uEbrv39ozHvwb/+MQpeXkCDJO7e55rNhXPRNgbdhbloQ74xk+fNaeSDprUzLLf0Wvfs+PHjrx1/jRksAs+5E+5OwAcnXIv/tMtC+7d27LLV2fTpl0bt/wA2fjaFH+uW7wAAAABJRU5ErkJggg==" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3"> Free Usage for Tenants</small>
+                        <h1 class="display-5 mb-4">A Tenant-Centric Approach</h1>
+                        <p class="mb-4">In our commitment to fairness, tenants can avail themselves of the
+                            app's benefits without incurring any direct costs. The platform's accessibility
+                            and user-friendliness for both side Tenant - Landlord, ensuring a tenantlandlord friendly experience.</p>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Free Access to App Benefits
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Tenant-Centric Approach
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>No Direct Costs for Tenants
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Tenant-Landlord Friendly Experience
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal7">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Free Usage for Tenants</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Free Access to App Benefits:</h4>
+                            <ul>
+                              <li>Tenants enjoy free access to the app's benefits, emphasizing our commitment to fairness and equal opportunity.</li>
+                              <li>The platform provides valuable resources without imposing any direct costs on tenants, fostering an inclusive and accessible experience.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Tenant-Centric Approach:</h4>
+                            <ul>
+                              <li>Our approach is centered around tenants, prioritizing their needs and ensuring a user-friendly environment.</li>
+                              <li>The platform is designed to cater to tenants' requirements, creating a tenant-centric experience that enhances satisfaction and convenience.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. No Direct Costs for Tenants:</h4>
+                            <ul>
+                              <li>Tenants incur no direct costs when utilizing the app, aligning with our dedication to fairness and providing a budget-friendly solution.</li>
+                              <li>This policy encourages tenant engagement and participation in the platform without financial barriers.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Tenant-Landlord Friendly Experience:</h4>
+                            <ul>
+                              <li>The platform's accessibility and user-friendliness promote a positive tenant-landlord relationship.</li>
+                              <li>By creating a friendly and intuitive environment for both parties, the app enhances communication and collaboration, contributing to a harmonious renting experience.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>                      
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- 8. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center flex-row-reverse">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://www.cookiebot.com/en/wp-content/uploads/sites/7/2021/07/cb_blog_hero_770x513_cookie_legal_requirement_best_practice_202310.svg" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <h1 class="display-5 mb-4">Effortless Formalities</h1>
+                        <p class="mb-4">Post-matching, all formalities, from signing agreements to submitting
+                            government proofs, can be effortlessly completed within the app. Enjoy a
+                            streamlined experience, saving time and paperwork.</p>
+                       <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Effortless Post-Matching Formalities
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Streamlined Agreement Signing
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Government Proof Submission Made Easy
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Time and Paperwork Savings
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal8">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Effortless Formalities</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Effortless Post-Matching Formalities:</h4>
+                            <ul>
+                              <li>Once the matching process is complete, the app facilitates a seamless transition into formalities such as signing agreements and submitting government proofs.</li>
+                              <li>Users can enjoy a hassle-free experience, eliminating the need for manual coordination and paperwork.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Streamlined Agreement Signing:</h4>
+                            <ul>
+                              <li>The app streamlines the agreement signing process, allowing users to complete this essential formality with ease.</li>
+                              <li>Enjoy the convenience of a digital platform that simplifies complex procedures, saving time and effort for both tenants and landlords.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Government Proof Submission Made Easy:</h4>
+                            <ul>
+                              <li>Submission of government proofs is effortlessly integrated into the app, eliminating the need for additional visits or manual handling.</li>
+                              <li>Users can navigate through a user-friendly interface to submit required documents, contributing to a paperless and efficient process.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Time and Paperwork Savings:</h4>
+                            <ul>
+                              <li>Embrace a streamlined experience that not only saves time but also reduces the burden of paperwork.</li>
+                              <li>Our platform's efficiency allows users to complete formalities swiftly, providing a modern and convenient solution to the often tedious process of documentation.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!--9. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://img.freepik.com/premium-vector/qualified-real-estate-agent-concept-realtor-assistance-help-mortgage-contract-real-estate-vector_566886-1658.jpg" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3"> Property Maintenance Assistance</small>
+                        <h1 class="display-5 mb-4">Property Management Services</h1>
+                        <p class="mb-4">For property owners with substantial portfolios, our company offers
+                            support in property upkeep, particularly for those residing abroad. This service
+                            ensures that properties are well-maintained and secure, providing peace of mind
+                            for property owners.</p>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Comprehensive Property Management Services
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Support for Property Upkeep
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Well-Maintained and Secure Properties
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Peace of Mind for Property Owners
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal9">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Property Maintenance Assistance</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Comprehensive Property Management Services:</h4>
+                            <ul>
+                              <li>Our company provides property owners with extensive management services, catering to those with substantial real estate portfolios.</li>
+                              <li>The range of services encompasses various aspects of property upkeep, ensuring a comprehensive and worry-free solution.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Support for Property Upkeep:</h4>
+                            <ul>
+                              <li>Property owners, especially those residing abroad, receive dedicated support for the upkeep of their real estate assets.</li>
+                              <li>This assistance is designed to alleviate the challenges of remote property management, offering peace of mind and assurance.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Well-Maintained and Secure Properties:</h4>
+                            <ul>
+                              <li>The property maintenance assistance service guarantees that properties are not only well-maintained but also secure.</li>
+                              <li>Property owners can trust that their investments are in good hands, fostering a sense of security and confidence in the upkeep of their real estate assets.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Peace of Mind for Property Owners:</h4>
+                            <ul>
+                              <li>Our property management services aim to provide property owners with peace of mind.</li>
+                              <li>By entrusting the maintenance of their properties to our company, owners can focus on other aspects of their lives or investments with confidence in the reliable upkeep of their real estate assets.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>                      
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- 10. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center flex-row-reverse">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://s9financialplanners.com/assets/img/NRI.png" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <h1 class="display-5 mb-4">Non-Resident Indian</h1>
+                        <ul>
+                        <li><p class="mb-4">Owning land in India is valuable, but managing it from afar poses challenges. Companies now offer comprehensive solutions, handling everything from property taxes to repairs, providing peace of mind—especially beneficial for those residing abroad. This ensures property care without the worry of finding someone to oversee these matters.</p></li>
+                        <li><p class="mb-4">Considering land investment in India? Factor in maintenance costs, but a reliable company can grant you all the benefits hassle-free.</p></li>
+                        </ul>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Property Ownership Value
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Challenges of Remote Management
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Comprehensive Solutions by Companies
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Peace of Mind for Overseas Owners
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal10">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Non-Resident Indian</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Property Ownership Value:</h4>
+                            <p>Owning land in India is recognized as a valuable asset, contributing to individual wealth and investment portfolios.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Challenges of Remote Management:</h4>
+                            <p>Managing property from a distance presents inherent challenges, ranging from overseeing day-to-day affairs to addressing unforeseen issues.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Comprehensive Solutions by Companies:</h4>
+                            <p>Recognizing these challenges, companies now offer comprehensive solutions to property owners, addressing various aspects such as property taxes and repairs.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Peace of Mind for Overseas Owners:</h4>
+                            <p>Particularly beneficial for those residing abroad, these services provide peace of mind by handling all aspects of property management, eliminating the need for owners to find someone locally to oversee these matters.</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!--11. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://static.semrush.com/blog/uploads/media/0a/8e/0a8e35cd45a0a4bb7046be4f1a08064d/b81f510b65570232ddf58b2fa5dbff8b/chatgpt-prompts.svg" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <h1 class="display-5 mb-4">Prompt Issue Resolution</h1>
+                        <p class="mb-4">
+                            Our company prioritizes swift action on tenant issues—addressing water leaks, carpentry needs, or electrical malfunctions as soon as possible. This commitment ensures a comfortable living environment, fostering positive relationships, and building trust through quick issue resolution.</p>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Swift Issue Resolution:
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Comprehensive Problem Solving
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Comfortable Living Environment
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Positive Relationship Building
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal11">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Prompt Issue Resolution</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Swift Issue Resolution:</h4>
+                            <p>Our company is committed to promptly addressing tenant issues, ensuring quick and efficient resolution.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Comprehensive Problem Solving:</h4>
+                            <p>Whether it's water leaks, carpentry needs, or electrical malfunctions, we take immediate action to address a wide range of concerns.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>3. Comfortable Living Environment:</h4>
+                            <p>Our swift response contributes to maintaining a comfortable living environment for tenants, enhancing their overall experience.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>4. Positive Relationship Building:</h4>
+                            <p>By prioritizing quick issue resolution, we aim to foster positive relationships with tenants, creating a sense of trust and satisfaction within our housing community.</p>
+                          </div>
+                        </div>
+                      </div>                      
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- 12. About Satrt -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center flex-row-reverse">
+                    <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="https://www.cflowapps.com/wp-content/uploads/2023/02/invoiic_automtn.jpg" class="img-fluid rounded" alt="">
+                    </div>
+                    <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                        <h1 class="display-5 mb-4">RECEIPT VALUES</h1>
+                        <ul>
+                        <li><p class="mb-4">The receipts that tenants receive from the company hold significant value, and the company grants authority based on them.</p></li>
+                        </ul>
+                        <div class="row g-4 text-dark mb-5">
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Significant Value in Receipts
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fas fa-share text-primary me-2"></i>Authority Granted Based on Receipts
+                            </div>
+                        </div>
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal12">More <i class="fas fa-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="searchModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen h-auto">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Seamless Communication</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col">
+                            <h4>1. Significant Value in Receipts:</h4>
+                            <p>The receipts issued by our company are not just documentation; they hold substantial value, serving as crucial records of transactions and financial interactions.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col">
+                            <h4>2. Authority Granted Based on Receipts:</h4>
+                            <p>The company acknowledges the importance of receipts by granting authority based on them. These documents play a pivotal role in validating transactions and conferring legitimacy.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        </div>
+        <!-- About End -->
 
         <!-- Service Start -->
         <div class="container-fluid service py-6">
@@ -224,9 +1088,8 @@
                             <div class="service-content d-flex align-items-center justify-content-center p-4">
                                 <div class="service-content-icon text-center">
                                     <i class="fas fa-cheese fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Wedding Services</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                    <h4 class="mb-3">Seamless Communication</h4>
+                                    <p class="mb-4">Direct interaction between tenants and landlords for clear transactions.</p>
                                 </div>
                             </div>
                         </div>
@@ -236,9 +1099,9 @@
                             <div class="service-content d-flex align-items-center justify-content-center p-4">
                                 <div class="service-content-icon text-center">
                                     <i class="fas fa-pizza-slice fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Corporate Catering</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                    <h4 class="mb-3">Hassle-Free Payment Process</h4>
+                                    <p class="mb-4">Automatic rent payments with personalized reminders for stress-free transactions.</p>
+
                                 </div>
                             </div>
                         </div>
@@ -248,9 +1111,8 @@
                             <div class="service-content d-flex align-items-center justify-content-center p-4">
                                 <div class="service-content-icon text-center">
                                     <i class="fas fa-hotdog fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Cocktail Reception</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                    <h4 class="mb-3">Intervention and Penalties</h4>
+                                    <p class="mb-4">Prompt response to missed payments, with the company covering rent on behalf of the tenant.</p>
                                 </div>
                             </div>
                         </div>
@@ -260,57 +1122,8 @@
                             <div class="service-content d-flex align-items-center justify-content-center p-4">
                                 <div class="service-content-icon text-center">
                                     <i class="fas fa-hamburger fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Bento Catering</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.1s">
-                        <div class="bg-light rounded service-item">
-                            <div class="service-content d-flex align-items-center justify-content-center p-4">
-                                <div class="service-content-icon text-center">
-                                    <i class="fas fa-wine-glass-alt fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Pub Party</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
-                        <div class="bg-light rounded service-item">
-                            <div class="service-content d-flex align-items-center justify-content-center p-4">
-                                <div class="service-content-icon text-center">
-                                    <i class="fas fa-walking fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Home Delivery</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
-                        <div class="bg-light rounded service-item">
-                            <div class="service-content d-flex align-items-center justify-content-center p-4">
-                                <div class="service-content-icon text-center">
-                                    <i class="fas fa-wheelchair fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Sit-down Catering</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.7s">
-                        <div class="bg-light rounded service-item">
-                            <div class="service-content d-flex align-items-center justify-content-center p-4">
-                                <div class="service-content-icon text-center">
-                                    <i class="fas fa-utensils fa-7x text-primary mb-4"></i>
-                                    <h4 class="mb-3">Buffet Catering</h4>
-                                    <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                    <h4 class="mb-3">Property Maintenance Assistance</h4>
+                                    <p class="mb-4">Support for property upkeep for owners with substantial portfolios, ensuring well-maintained and secure properties.</p>
                                 </div>
                             </div>
                         </div>
@@ -325,37 +1138,9 @@
         <div class="container-fluid event py-6">
             <div class="container">
                 <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
-                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Latest Events</small>
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Gallery</small>
                     <h1 class="display-5 mb-5">Our Social & Professional Events Gallery</h1>
                 </div>
-                <div class="tab-class text-center">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
-                        <li class="nav-item p-2">
-                            <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href=" {% static '#tab-1' %} ">
-                                <span class="text-dark" style="width: 150px;">All Events</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex py-2 mx-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-2' %} ">
-                                <span class="text-dark" style="width: 150px;">Wedding</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-3' %} ">
-                                <span class="text-dark" style="width: 150px;">Corporate</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-4' %} ">
-                                <span class="text-dark" style="width: 150px;">Cocktail</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-5' %} ">
-                                <span class="text-dark" style="width: 150px;">Buffet</span>
-                            </a>
-                        </li>
-                    </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
@@ -363,7 +1148,7 @@
                                     <div class="row g-4">
                                         <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
                                             <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-1.jpg' %} " alt="">
+                                                <img class="img-fluid rounded w-100" src="https://cdn-flnkc.nitrocdn.com/KFlCDdxHmXxwfeAbWXbVTSQOtYohfXjT/assets/images/optimized/rev-1b30c7a/static.voices.com/wp-content/uploads/real-estate.jpg" alt="">
                                                 <div class="event-overlay d-flex flex-column p-4">
                                                     <h4 class="me-auto">Wedding</h4>
                                                     <a href=" {% static 'img/event-1.jpg' %} " data-lightbox="event-1" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -372,7 +1157,7 @@
                                         </div>
                                         <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
                                             <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-2.jpg' %} " alt="">
+                                                <img class="img-fluid rounded w-100" src="https://www.nerdwallet.com/assets/blog/wp-content/uploads/2021/04/GettyImages-1166187828-articlemortgages843697.jpg" alt="">
                                                 <div class="event-overlay d-flex flex-column p-4">
                                                     <h4 class="me-auto">Corporate</h4>
                                                     <a href=" {% static 'img/event-2.jpg' %} " data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -381,7 +1166,7 @@
                                         </div>
                                         <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
                                             <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-3.jpg' %} " alt="">
+                                                <img class="img-fluid rounded w-100" src="https://media.istockphoto.com/id/1373322416/photo/positive-businesspeople-having-a-meeting-in-a-boardroom.jpg?b=1&s=612x612&w=0&k=20&c=O-jCCGHJQcXqBzyyCNcR7f_rL69i5SxG1d2owL7t0Vk=" alt="">
                                                 <div class="event-overlay d-flex flex-column p-4">
                                                     <h4 class="me-auto">Wedding</h4>
                                                     <a href=" {% static 'img/event-3.jpg' %} " data-lightbox="event-3" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -390,150 +1175,10 @@
                                         </div>
                                         <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
                                             <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-4.jpg' %} " alt="">
+                                                <img class="img-fluid rounded w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs_GTmQhNBZ59SMbVK3eEmOyhUm6mAxBe8mg&usqp=CAU" alt="">
                                                 <div class="event-overlay d-flex flex-column p-4">
                                                     <h4 class="me-auto">Buffet</h4>
                                                     <a href=" {% static 'img/event-4.jpg' %} " data-lightbox="event-4" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-5.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Cocktail</h4>
-                                                    <a href=" {% static 'img/event-5.jpg' %} " data-lightbox="event-5" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-6.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Wedding</h4>
-                                                    <a href=" {% static 'img/event-6.jpg' %} " data-lightbox="event-6" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-7.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Buffet</h4>
-                                                    <a href=" {% static 'img/event-7.jpg' %} " data-lightbox="event-7" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-8.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Corporate</h4>
-                                                    <a href=" {% static 'img/event-8.jpg' %} " data-lightbox="event-17" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-1.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Wedding</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-8" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-2.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Wedding</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-9" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-3.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Corporate</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-10" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-4.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Corporate</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-11" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-4" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-5.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Cocktail</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-12" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-6.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Cocktail</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-13" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-5" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-7.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Buffet</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-14" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="event-img position-relative">
-                                                <img class="img-fluid rounded w-100" src=" {% static 'img/event-8.jpg' %} " alt="">
-                                                <div class="event-overlay d-flex flex-column p-4">
-                                                    <h4 class="me-auto">Buffet</h4>
-                                                    <a href=" {% static 'img/01.jpg' %} " data-lightbox="event-15" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -552,37 +1197,10 @@
         <div class="container-fluid menu bg-light py-6 my-6">
             <div class="container">
                 <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
-                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Menu</small>
-                    <h1 class="display-5 mb-5">Most Popular Food in the World</h1>
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Values</small>
+                    <h1 class="display-5 mb-5">Our Values</h1>
                 </div>
                 <div class="tab-class text-center">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
-                        <li class="nav-item p-2">
-                            <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill active" data-bs-toggle="pill" href=" {% static '#tab-6' %} ">
-                                <span class="text-dark" style="width: 150px;">Starter</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-7' %} ">
-                                <span class="text-dark" style="width: 150px;">Main Course</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-8' %} ">
-                                <span class="text-dark" style="width: 150px;">Drinks</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-9' %} ">
-                                <span class="text-dark" style="width: 150px;">Offers</span>
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill" href=" {% static '#tab-10' %} ">
-                                <span class="text-dark" style="width: 150px;">Our Spesial</span>
-                            </a>
-                        </li>
-                    </ul>
                     <div class="tab-content">
                         <div id="tab-6" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
@@ -591,10 +1209,9 @@
                                         <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-01.jpg' %} " alt="">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Paneer</h4>
-                                                <h4 class="text-primary">$90</h4>
+                                                <h4>Innovation</h4>
                                             </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            <p class="mb-0">Embrace and drive innovative solutions to enhance the rental experience.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -603,10 +1220,9 @@
                                         <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-02.jpg' %} " alt="">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Sweet Potato</h4>
-                                                <h4 class="text-primary">$90</h4>
+                                                <h4>Trust</h4>
                                             </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            <p class="mb-0">Build trust through prompt issue resolution, reliability, and fair practices.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -615,10 +1231,9 @@
                                         <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-03.jpg' %} " alt="">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Sabudana Tikki</h4>
-                                                <h4 class="text-primary">$90</h4>
+                                                <h4>Community</h4>
                                             </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            <p class="mb-0">Create a collaborative and responsible housing community.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -627,10 +1242,9 @@
                                         <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-04.jpg' %} " alt="">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Pizza</h4>
-                                                <h4 class="text-primary">$90</h4>
+                                                <h4>Efficiency</h4>
                                             </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            <p class="mb-0">Streamline processes for both landlords and tenants, saving time and effort.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -639,10 +1253,11 @@
                                         <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-05.jpg' %} " alt="">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Bacon</h4>
-                                                <h4 class="text-primary">$90</h4>
+                                                <h4>Transparency</h4>
                                             </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            <p class="mb-0">Foster transparent communication and financial accountability.
+                                                Responsibility: Uphold a sense of responsibility towards property management and
+                                                community well-being.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -651,34 +1266,12 @@
                                         <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-06.jpg' %} " alt="">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Chicken</h4>
-                                                <h4 class="text-primary">$90</h4>
+                                                <h4>Our Commitment</h4>
                                             </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.7s">
-                                    <div class="menu-item d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-07.jpg' %} " alt="">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Blooming</h4>
-                                                <h4 class="text-primary">$90</h4>
-                                            </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.8s">
-                                    <div class="menu-item d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded-circle" src=" {% static 'img/menu-08.jpg' %} " alt="">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                <h4>Sweet</h4>
-                                                <h4 class="text-primary">$90</h4>
-                                            </div>
-                                            <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            <p class="mb-0">We are committed to providing user-friendly platforms, promoting
+                                                fairness, and offering comprehensive property management services. Our dedication
+                                                is to facilitate smooth transactions, resolve issues promptly, and ensure a comfortable
+                                                living environment for all our stakeholders.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1090,101 +1683,13 @@
         </div>
         <!-- Menu End -->
 
-
-        <!-- Book Us Start -->
-        <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-1">
-                        <img src=" {% static 'img/background-site.jpg' %} " class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
-                    </div>
-                    <div class="col-10">
-                        <div class="border-bottom border-top border-primary bg-light py-5 px-4">
-                            <div class="text-center">
-                                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
-                                <h1 class="display-5 mb-5">Where you want Our Services</h1>
-                            </div>
-                            <div class="row g-4 form">
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Country</option>
-                                        <option value="1">USA</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select City</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Palace</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Small Event</option>
-                                        <option value="1">Event Type</option>
-                                        <option value="2">Big Event</option>
-                                        <option value="3">Small Event</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>No. Of Palace</option>
-                                        <option value="1">100-200</option>
-                                        <option value="2">300-400</option>
-                                        <option value="3">500-600</option>
-                                        <option value="4">700-800</option>
-                                        <option value="5">900-1000</option>
-                                        <option value="6">1000+</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Vegetarian</option>
-                                        <option value="1">Vegetarian</option>
-                                        <option value="2">Non Vegetarian</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="mobile" class="form-control border-primary p-2" placeholder="Your Contact No.">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <img src=" {% static 'img/background-site.jpg' %} " class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Book Us End -->
-
         
         <!-- Team Start -->
         <div class="container-fluid team py-6">
             <div class="container">
                 <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
                     <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Team</small>
-                    <h1 class="display-5 mb-5">We have experienced chef Team</h1>
+                    <h1 class="display-5 mb-5">We have experienced Team</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.1s">
@@ -1192,7 +1697,7 @@
                             <img class="img-fluid rounded-top " src=" {% static 'img/team-1.jpg' %} " alt="">
                             <div class="team-content text-center py-3 bg-dark rounded-bottom">
                                 <h4 class="text-primary">Henry</h4>
-                                <p class="text-white mb-0">Decoration Chef</p>
+                                <p class="text-white mb-0">Ceo</p>
                             </div>
                             <div class="team-icon d-flex flex-column justify-content-center m-4">
                                 <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=" {% static '' %} "><i class="fas fa-share-alt"></i></a>
@@ -1207,7 +1712,7 @@
                             <img class="img-fluid rounded-top " src=" {% static 'img/team-2.jpg' %} " alt="">
                             <div class="team-content text-center py-3 bg-dark rounded-bottom">
                                 <h4 class="text-primary">Jemes Born</h4>
-                                <p class="text-white mb-0">Executive Chef</p>
+                                <p class="text-white mb-0">Cto</p>
                             </div>
                             <div class="team-icon d-flex flex-column justify-content-center m-4">
                                 <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=" {% static '' %} "><i class="fas fa-share-alt"></i></a>
@@ -1222,7 +1727,7 @@
                             <img class="img-fluid rounded-top " src=" {% static 'img/team-3.jpg' %} " alt="">
                             <div class="team-content text-center py-3 bg-dark rounded-bottom">
                                 <h4 class="text-primary">Martin Hill</h4>
-                                <p class="text-white mb-0">Kitchen Porter</p>
+                                <p class="text-white mb-0">Director</p>
                             </div>
                             <div class="team-icon d-flex flex-column justify-content-center m-4">
                                 <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=" {% static '' %} "><i class="fas fa-share-alt"></i></a>
@@ -1237,7 +1742,7 @@
                             <img class="img-fluid rounded-top " src=" {% static 'img/team-4.jpg' %} " alt="">
                             <div class="team-content text-center py-3 bg-dark rounded-bottom">
                                 <h4 class="text-primary">Adam Smith</h4>
-                                <p class="text-white mb-0">Head Chef</p>
+                                <p class="text-white mb-0">Devrel</p>
                             </div>
                             <div class="team-icon d-flex flex-column justify-content-center m-4">
                                 <a class="share btn btn-primary btn-md-square rounded-circle mb-2" href=" {% static '' %} "><i class="fas fa-share-alt"></i></a>
@@ -1252,252 +1757,50 @@
         </div>
         <!-- Team End -->
 
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid py-6">
-            <div class="container">
-                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
-                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Testimonial</small>
-                    <h1 class="display-5 mb-5">What Our Customers says!</h1>
-                </div>
-                <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-1.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-2.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-3.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-4.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-carousel testimonial-carousel testimonial-carousel-2 wow bounceInUp" data-wow-delay="0.3s">
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-1.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-2.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-3.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded bg-light">
-                        <div class="d-flex mb-3">
-                            <img src=" {% static 'img/testimonial-4.jpg' %} " class="img-fluid rounded-circle flex-shrink-0" alt="">
-                            <div class="position-absolute" style="top: 15px; right: 20px;">
-                                <i class="fa fa-quote-right fa-2x"></i>
-                            </div>
-                            <div class="ps-3 my-auto">
-                                <h4 class="mb-0">Person Name</h4>
-                                <p class="m-0">Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="d-flex">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-
-
         <!-- Blog Start -->
         <div class="container-fluid blog py-6">
             <div class="container">
                 <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
-                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Blog</small>
-                    <h1 class="display-5 mb-5">Be First Who Read News</h1>
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our V/M</small>
+                    <h1 class="display-5 mb-5">Vision/Mission</h1>
                 </div>
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s">
-                        <div class="blog-item">
-                            <div class="overflow-hidden rounded">
-                                <img src=" {% static 'img/blog-1.jpg' %} " class="img-fluid w-100" alt="">
-                            </div>
-                            <div class="blog-content mx-4 d-flex rounded bg-light">
-                                <div class="text-dark bg-primary rounded-start">
-                                    <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
-                                        <p class="fw-bold mb-0">16</p>
-                                        <p class="fw-bold mb-0">Sep</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="h5 lh-base my-auto h-100 p-3">How to get more test in your food from</a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.3s">
                         <div class="blog-item">
                             <div class="overflow-hidden rounded">
-                                <img src=" {% static 'img/blog-2.jpg' %} " class="img-fluid w-100" alt="">
+                                <img  style="height: 244px;" src="https://cdni.iconscout.com/illustration/premium/thumb/vision-4352694-3611155.png?f=webp" class="img-fluid w-100" alt="">
                             </div>
-                            <div class="blog-content mx-4 d-flex rounded bg-light">
-                                <div class="text-dark bg-primary rounded-start">
+                            <div class="w-100 mx-0 row d-flex rounded bg-light">
+                                <div class="text-dark bg-primary rounded-top mt-2 ">
                                     <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
-                                        <p class="fw-bold mb-0">16</p>
-                                        <p class="fw-bold mb-0">Sep</p>
+                                        <p class="fw-bold mb-0">Vision</p>
                                     </div>
                                 </div>
-                                <a href="#" class="h5 lh-base my-auto h-100 p-3">How to get more test in your food from</a>
+                                <p href="#" class="h5 lh-base my-auto h-100 p-3" style="text-align: justify;">To revolutionize the rental experience by providing innovative and tenant-centric
+                                    solutions, fostering transparent and accountable relationships between landlords and tenants.
+                                    Our mission is to offer seamless communication, hassle-free transactions, and swift issue
+                                    resolution, ensuring a comfortable and trustworthy living environment.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.5s">
                         <div class="blog-item">
                             <div class="overflow-hidden rounded">
-                                <img src=" {% static 'img/blog-3.jpg' %} " class="img-fluid w-100" alt="">
+                                <img style="height: 244px;" src="https://cdni.iconscout.com/illustration/premium/thumb/mission-goals-4252954-3526675.png?f=webp" class="img-fluid w-100" alt="">
                             </div>
-                            <div class="blog-content mx-4 d-flex rounded bg-light">
-                                <div class="text-dark bg-primary rounded-start">
+                                <div class="w-100 mx-0 row d-flex rounded bg-light">
+                                <div class="text-dark bg-primary rounded-top">
                                     <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
-                                        <p class="fw-bold mb-0">16</p>
-                                        <p class="fw-bold mb-0">Sep</p>
+                                        <p class="fw-bold mb-0">Mission</p>
                                     </div>
                                 </div>
-                                <a href="#" class="h5 lh-base my-auto h-100 p-3">How to get more test in your food from</a>
+                                <a href="#" class="h5 lh-base my-auto h-100 p-3" style="text-align: justify;">To be the leading force in redefining the real estate ecosystem, promoting financial
+                                    accountability, and building a community where property management is effortless and
+                                    stress-free. We envision a future where our comprehensive services empower property
+                                    owners, tenants, and non-resident Indians, creating a harmonious and responsible housing
+                                    community.
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -1507,13 +1810,66 @@
         <!-- Blog End -->
 
 
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-6 wow bounceInUp" id="contact" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="p-5 bg-light rounded contact-form">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Get in touch</small>
+                            <h1 class="display-5 mb-0">Contact Us For Any Queries!</h1>
+                        </div>
+                        <div class="col-md-6 col-lg-7">
+                            <p class="mb-4">Feel free to reach out to us with any inquiries, feedback, or assistance you may need. Your satisfaction is our priority, and we're here to help. Choose a convenient method to get in touch</a>.</p>
+                            <form>
+                                <input type="text" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name">
+                                <input type="email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Email">
+                                <textarea class="w-100 form-control mb-4 p-3 border-primary bg-light" rows="4" cols="10" placeholder="Your Message"></textarea>
+                                <button class="w-100 btn btn-primary form-control p-3 border-primary bg-primary rounded-pill" type="submit">Submit Now</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div>
+                                <div class="d-inline-flex w-100 border border-primary p-4 rounded mb-4">
+                                    <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
+                                    <div class="">
+                                        <h4>Address</h4>
+                                        <p>123 Street, New York, USA</p>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex w-100 border border-primary p-4 rounded mb-4">
+                                    <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                                    <div class="">
+                                        <h4>Mail Us</h4>
+                                        <p class="mb-2">info@example.com</p>
+                                        <p class="mb-0">support@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex w-100 border border-primary p-4 rounded">
+                                    <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
+                                    <div class="">
+                                        <h4>Telephone</h4>
+                                        <p class="mb-2">(+012) 3456 7890 123</p>
+                                        <p class="mb-0">(+704) 5555 0127 296</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->       
+
+
+
         <!-- Footer Start -->
         <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
-                            <h1 class="text-primary">Cater<span class="text-dark">Serv</span></h1>
+                            <h1 class="text-primary">Fin<span class="text-dark">alty</span></h1>
                             <p class="lh-lg mb-4">There cursus massa at urnaaculis estieSed aliquamellus vitae ultrs condmentum leo massamollis its estiegittis miristum.</p>
                             <div class="footer-icon d-flex">
                                 <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=" {% static '' %} "><i class="fab fa-facebook-f"></i></a>
@@ -1574,26 +1930,6 @@
             </div>
         </div>
         <!-- Footer End -->
-
-
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-dark py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 my-auto text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below authorâ€™s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below authorâ€™s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
-
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   

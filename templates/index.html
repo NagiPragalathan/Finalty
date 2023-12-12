@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Open+Sans:wght@300&display=swap" rel="stylesheet">   
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -55,7 +56,7 @@
             font-family: "Libre Baskerville", monospace, 'Courier New';
         }
         p{
-            font-family: "Cormorant Garamond", monospace, 'Courier New';'
+            font-family: "Crimson Pro", monospace, 'Courier New';'
             font-size:20px;
         }
         .com_name{
@@ -66,7 +67,7 @@
 
     <!-- Navbar start -->
     <!-- component -->
-    <nav class="bg-white border-gray-200 py-4 dark:bg-gray-900 sticky top-0">
+    <nav class="bg-white border-gray-200 py-4 dark:bg-gray-900 sticky top-0" style="z-index: 999;">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             <a href="#" class="flex items-center">
                 <img src="{% static 'images/logo.png' %}" style="height:50px" class="h-6 mr-3 sm:h-9" alt="Landwind Logo">
@@ -110,7 +111,7 @@
                             class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                     </li>
                     <li>
-                        <a href="#contact"
+                        <a href="#peoples"
                             class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Key Peoples</a>
                     </li>
                 </ul>
@@ -125,7 +126,7 @@
             <div class="flex flex-wrap g-5 items-center flex-col-reverse sm:flex-col-reverse md:flex-col-reverse lg:flex-row sm:flex-row-reverse" id="hero">
                 <div class="lg:w-3/5 pr-4 pl-4 md:w-full pr-2 pl-4 pt-4">
                     {% comment %} <small class="inline-block fw-bold text-gray-900 uppercase bg-gray-100 border orange_border rounded-full py-2 px-4 px-4 py-1 mb-4 animated bounceInDown">Welcome to <span class="com_name">Finalty</span></small> {% endcomment %}
-                    <h1 class="display-5 mb-8 lg:text-5xl text-2xl sm:text-3xl sm:text-2xl" style="color:black">Welcome to <span class="com_name orange_color" >Finalty</span> - A Comprehensive Guide to Smart Tenant-Landlord Solutions</h1>
+                    <h1 class="display-5 mb-8 lg:text-5xl text-2xl sm:text-3xl sm:text-2xl" style="color:black">Welcome to <span class="com_name" >Finalty</span> - A Comprehensive Guide to Smart Tenant-Landlord Solutions</h1>
                     <p class="text-xl font-light mb-4 " id="para_hero">Step into the world of <span class="com_name">Finalty</span>, your comprehensive guide to intelligent solutions for both tenants and landlords. Navigate the future of seamless property management with us!</p>
                     <a href="#about" class="inline-block align-middle mt-7 text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline orange_background text-white hover:orange_background border-0 rounded-full py-2 px-4 py-3 px-4 md:px-12 animated bounceInLeft">Know More</a>
                 </div>

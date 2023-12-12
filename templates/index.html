@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha512-TyUaMbYrKFZfQfp+9nQGOEt+vGu4nKzLk0KaV3nFifL3K8n7lzb8DayTzLOK0pNyzxGJzGRSw78e8xqJhURJ3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,8 +24,9 @@
     </div>
     <!-- Spinner End -->
     <style>
+
         h1{
-            font-family: cursive, monospace, 'Courier New';
+            font-family: "Josefin Sans", cursive, monospace, 'Courier New';
             font-size: x-large;
         }
         #icon_arrow{
@@ -44,6 +49,12 @@
             border:none;
             border-bottom:2px solid #FC4C01;
         }
+        #para_hero{
+            font-family: "Libre Baskerville", monospace, 'Courier New';
+        }
+        p{
+            font-family: "Cormorant Garamond", monospace, 'Courier New';
+        }
     </style>
 
 
@@ -59,7 +70,6 @@
                 <div class="hidden mt-2 mr-4 sm:inline-block">
                     <span></span>
                 </div>
-    
                 <a href="#contact"
                     class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">Contact Now</a>
                 <button data-collapse-toggle="mobile-menu-2" type="button"
@@ -106,7 +116,7 @@
                 <div class="lg:w-3/5 pr-4 pl-4 md:w-full pr-2 pl-4 pt-4">
                     <small class="inline-block fw-bold text-gray-900 uppercase bg-gray-100 border orange_border rounded-full py-2 px-4 px-4 py-1 mb-4 animated bounceInDown">Welcome to Finalty</small>
                     <h1 class="display-5 mb-8 lg:text-5xl text-2xl sm:text-3xl sm:text-2xl" style="color:black">Welcome to <span class="orange_color">Finalty</span> - A Comprehensive Guide to Smart Tenant-Landlord Solutions</h1>
-                    <p class="text-xl font-light mb-4 ">Experience the epitome of event excellence. Elevate your occasions with Finalty, providing unmatched catering solutions for unforgettable memories.</p>
+                    <p class="text-xl font-light mb-4 " id="para_hero">Experience the epitome of event excellence. Elevate your occasions with Finalty, providing unmatched catering solutions for unforgettable memories.</p>
                     <a href="#about" class="inline-block align-middle mt-7 text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline orange_background text-white hover:orange_background border-0 rounded-full py-2 px-4 py-3 px-4 md:px-12 animated bounceInLeft">Know More</a>
                 </div>
                 <div class="lg:w-2/5 pr-4 pl-4 md:w-full pr-4 pl-4">
@@ -515,7 +525,7 @@
     </div>
     <!-- About End -->
 
-    <!-- Service Start -->
+    {% comment %} <!-- Service Start -->
     <div class="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 service py-6">
         <div class="container mx-auto sm:px-4">
             <div class="text-center wow bounceInDown" data-wow-delay="0.1s">
@@ -570,9 +580,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> {% endcomment %}
     <!-- Service End -->
-    <div class="text-center wow bounceInDown" data-wow-delay="0.1s">
+    {% comment %} <div class="text-center wow bounceInDown" data-wow-delay="0.1s">
         <small class="inline-block fw-bold text-gray-900 uppercase bg-gray-100 border orange_border rounded-full py-2 px-4 px-4 py-1 mb-3">Our Gallery</small>
         <h1 class="display-5 mb-5">Our Social & Professional Events Gallery</h1>
     </div>
@@ -599,7 +609,7 @@
           </p>
         </div>
       </div>
-    <!-- End of gallery-->
+    <!-- End of gallery--> {% endcomment %}
 
     <!-- Menu Start -->
     <div class="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 menu bg-gray-100 py-6 my-6">
@@ -699,7 +709,7 @@
                         <div class="w-full lg:w-6/12 px-4">
                             <!-- Header -->
                             <h1 class="text-gray-900 text-4xl font-bold mb-8">
-                                Meet the Team
+                                Key Peoples
                             </h1>
 
                             <!-- Description -->
@@ -942,7 +952,7 @@
     <!-- Blog End -->
 
     <!-- component contact us -->
-    <div id="contact" class="relative flex items-top justify-center p-6 shadow-sm rounded-md transition duration-20 bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+    <div id="contact" class="relative flex items-top justify-center p-6 shadow-sm rounded-md transition duration-20 orange_background dark:bg-gray-900 sm:items-center sm:pt-0">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 wow flipInX" data-wow-delay="0.5s">
             <div class="mt-8 overflow-hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2">
@@ -1037,13 +1047,10 @@
                 <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
-              </li>
-              <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free Products</a>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Key peoples</a>
               </li>
             </ul>
           </div>
@@ -1051,16 +1058,10 @@
             <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
             <ul class="list-unstyled">
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
-              </li>
-              <li>
                 <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
               </li>
               <li>
                 <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
-              </li>
-              <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
               </li>
             </ul>
           </div>

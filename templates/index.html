@@ -99,7 +99,7 @@
             <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1 hidden" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
-                        <a href="#home"
+                        <a href="#home" id="home_"
                             class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                             aria-current="page">Home</a>
                     </li>
@@ -1100,18 +1100,44 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-          var colorChangeElement = document.getElementById('colorChangeElement');
+          var About = document.getElementById('about_');
+          var Peoples = document.getElementById('peoples_');
+          var Contact = document.getElementById('Contact_');
+          var Home = document.getElementById('home_');
     
           // Update color on scroll
           window.addEventListener('scroll', function () {
             var scrollPosition = window.scrollY;
     
             // You can adjust these values based on when you want the color to change
-            if (scrollPosition > 200) {
-              colorChangeElement.style.backgroundColor = 'red';
-            } else {
-              colorChangeElement.style.backgroundColor = 'blue';
+            if (scrollPosition > 675.2000122070312 && scrollPosition < 6459.2001953125) {
+                console.log("about")
+                About.style.color = "#6d28d9"
+                Home.style.color = "black"
+                Contact.style.color = "black"
+                Peoples.style.color = "black"
             }
+            else if (scrollPosition > 6459.2001953125 && scrollPosition < 7510) {
+                console.log("Key Peoples")
+                About.style.color = "black"
+                Home.style.color = "black"
+                Contact.style.color = "black"
+                Peoples.style.color = "#6d28d9"
+            }
+            else if (scrollPosition > 7510.39990234375) {
+                console.log("Contact")
+                About.style.color = "black"
+                Home.style.color = "black"
+                Contact.style.color = "#6d28d9"
+                Peoples.style.color = "black"
+            }else{
+                console.log("home")
+                About.style.color = "black"
+                Home.style.color = "#6d28d9"
+                Contact.style.color = "black"
+                Peoples.style.color = "black"
+            }
+            console.log(scrollPosition)
           });
         });
       </script>

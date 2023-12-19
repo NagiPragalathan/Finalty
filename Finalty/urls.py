@@ -26,11 +26,12 @@ from Finalty import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("",Home,name="home"),
+    path("",underdev,name="underdev"),
+    path("home_",Home,name="home"),
     path("about",About,name="about"),
     path("contactus",ContactUs,name="contact_us"),
-    path("team",ContactUs,name="team"),
-    path("services",services,name="service"),   
+    path("team",ContactUs,name="team"), 
+    path("underdev",underdev,name="underdev"),
 ]
 
 

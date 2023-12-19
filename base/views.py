@@ -16,3 +16,6 @@ def team(request):
 
 def services(request):
     return render(request, "service.html")
+
+def underdev(request):
+    return render(request, "underdev.html")
